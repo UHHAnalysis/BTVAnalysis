@@ -15,5 +15,12 @@
 
 #pragma link C++ class BTVCycle+;
 #pragma link C++ class TopBTaggingCycle+;
+#pragma link C++ class CheckFatScaleCycle+;
+#pragma link C++ class DoubleSubjetTagCycle+;
+#pragma link C++ class SemileptonicPreselectionCycle+;
+#pragma link C++ class SemileptonicselectionCycle+;
+#pragma link C++ class BTagEffHistsTopTag+;
+#pragma link C++ class BTagEffHistsTopTagJim+;
+#pragma link C++ class BTaggingRoutineTopTag+;
 
 #endif // __CINT__

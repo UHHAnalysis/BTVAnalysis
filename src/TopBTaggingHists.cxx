@@ -160,7 +160,7 @@ void TopBTaggingHists::Fill()
   int applyiso=0;
   int doivf=0;
 
-  int dohepmatch=0;
+  int dohepmatch=1;
 
   int csvivf=0;
 
@@ -515,17 +515,15 @@ void TopBTaggingHists::Fill()
       }
     }
 
-    cout <<"tag is " << HepTopTagFull(topjet) << endl;
-
     if((HepTopTag(topjet))&&(topjet.v4().mass()> (172.4 - masswind))&&(topjet.v4().mass()< (172.4 + masswind))){
       toptag=1;
     }
-    /* if(dohepmatch){
+    if(dohepmatch){
       toptag=0;
       if((HepTopTagMatch(topjet))&&(topjet.v4().mass()> (172.4 - masswind))&&(topjet.v4().mass()< (172.4 + masswind))){
-      toptag=1;
+	toptag=1;
       }
-      }*/
+    }
     if(countsbM_top==1&&toptag==1) Hist("flav_b_sub")->Fill(abs(flavorsub_top[indexb]));
     //IVF tag
     if(doivf){
@@ -715,12 +713,12 @@ void TopBTaggingHists::Fill()
     if((HepTopTag(antitopjet))&&(antitopjet.v4().mass()> (172.4 - masswind))&&(antitopjet.v4().mass()< (172.4 + masswind))){
       antitoptag=1;
     }
-    /*if(dohepmatch){
+    if(dohepmatch){
       antitoptag=0;
       if((HepTopTagMatch(antitopjet))&&(antitopjet.v4().mass()> (172.4 - masswind))&&(antitopjet.v4().mass()< (172.4 + masswind))){
 	antitoptag=1;
       }
-      }*/
+    }
     if(countsbM_antitop==1&&antitoptag==1) Hist("flav_b_sub")->Fill(abs(flavorsub_top[indexb]));
     //IVF tag
     if(doivf){
@@ -871,12 +869,12 @@ void TopBTaggingHists::Fill()
     if(HepTopTag(jetcheck)&&(jetcheck.v4().mass()> (172.4 - masswind))&&(jetcheck.v4().mass()< (172.4 + masswind))){
       toptag_qcd=1;
     }
-    /*if(dohepmatch){
+    if(dohepmatch){
       toptag_qcd=0;
       if(HepTopTagMatch(jetcheck)&&(jetcheck.v4().mass()> (172.4 - masswind))&&(jetcheck.v4().mass()< (172.4 + masswind))){
-      toptag_qcd=1;
+	toptag_qcd=1;
       }
-      }*/
+    }
     if(countsbM_qcd==1&&toptag_qcd==1) Hist("flav_b_sub")->Fill(abs(flavorsub_top[indexb]));
     //IVF tag
     if(doivf){
