@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE JobConfiguration PUBLIC "" "JobConfig.dtd" [
+<!ENTITY singleTt SYSTEM "lists/T_t-channel.xml">
+<!ENTITY singleTtW SYSTEM "lists/T_tW-channel.xml">
+<!ENTITY singleTs SYSTEM "lists/T_s-channel.xml">
+<!ENTITY singleTbart SYSTEM "lists/Tbar_t-channel.xml">
+<!ENTITY singleTbartW SYSTEM "lists/Tbar_tW-channel.xml">
+<!ENTITY singleTbars SYSTEM "lists/Tbar_s-channel.xml">
+<!ENTITY doubleWW SYSTEM "lists/WW.xml">
+<!ENTITY doubleZZ SYSTEM "lists/ZZ.xml">
+<!ENTITY doubleWZ SYSTEM "lists/WZ.xml">
+<!ENTITY DataA SYSTEM "lists/SingleMu_A.xml">
+<!ENTITY DataB SYSTEM "lists/SingleMu_B.xml">
+<!ENTITY DataC SYSTEM "lists/SingleMu_C.xml">
+<!ENTITY DataD SYSTEM "lists/SingleMu_D.xml">
+<!ENTITY WJets1 SYSTEM "lists/W1JetsToLNu.xml">
+<!ENTITY WJets2 SYSTEM "lists/W2JetsToLNu.xml">
+<!ENTITY WJets3 SYSTEM "lists/W3JetsToLNu.xml">
+<!ENTITY WJets4 SYSTEM "lists/W4JetsToLNu.xml">
+<!ENTITY ZJets1 SYSTEM "lists/DY1Jets.xml">
+<!ENTITY ZJets2 SYSTEM "lists/DY2Jets.xml">
+<!ENTITY ZJets3 SYSTEM "lists/DY3Jets.xml">
+<!ENTITY ZJets4 SYSTEM "lists/DY4Jets.xml">
+<!ENTITY TTbarsemi SYSTEM "lists/TTJets_SemiLeptMGDecays_8TeV-madgraph.xml">
+<!ENTITY TTbarlept SYSTEM "lists/TTJets_FullLeptMGDecays_8TeV-madgraph.xml">
+]>
+
+<JobConfiguration JobName="SemileptonicPreSelectionCycle" OutputLevel="INFO">
+
+        <Library Name="libfastjet"/>
+        <Library Name="libfastjettools"/>
+	<Library Name="libSFramePlugIns"/>
+        <Library Name="libSFrameTools"/>
+        <Library Name="libAnalysis"/>
+        <Library Name="libNtuple"/>
+        <Library Name="libJetMETObjects"/>
+        <Library Name="libBTVAnalysis"/>
+
+        <Package Name="BTVAnalysis.par" />
+
+
+	<Cycle Name="SemileptonicPreselectionCycle"  RunMode="PROOF" ProofServer="lite://"  ProofWorkDir="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/PROOF/" OutputDirectory="/scratch/hh/dust/naf/cms/user/imarches/gitSFrame/SemileptPre/" PostFix="" TargetLumi="1" > 
+
+
+     <!--  	        <InputData Lumi="1" NEventsMax="-1" Type="DATA" Version="DATAA" Cacheable="True">
+                       &DataA;
+		       <InputTree Name="AnalysisTree" /> 
+		       <OutputTree Name="AnalysisTree" />  
+		</InputData>  	 
+		   	  		
+	   	<InputData Lumi="1" NEventsMax="-1" Type="DATA" Version="DATAB" Cacheable="True">
+                       &DataB;
+			<InputTree Name="AnalysisTree" /> 
+			<OutputTree Name="AnalysisTree" />  
+		</InputData>
+		   	  	
+		<InputData Lumi="1" NEventsMax="-1" Type="DATA" Version="DATAC" Cacheable="True">
+                       &DataC;
+			<InputTree Name="AnalysisTree" /> 
+			<OutputTree Name="AnalysisTree" />  
+		</InputData>  	
+		
+	        <InputData Lumi="1" NEventsMax="-1" Type="DATA" Version="DATAD" Cacheable="True">
+                       &DataD;
+		       <InputTree Name="AnalysisTree" /> 
+		       <OutputTree Name="AnalysisTree" />  
+		</InputData>		  			 	   		  	    
+	
+--> 	     				
+		<InputData Lumi="234615.547506269" NEventsMax="-1" Type="MC" Version="TTbarsemi" Cacheable="True">
+		        &TTbarsemi;
+			<InputTree Name="AnalysisTree" />
+			<OutputTree Name="AnalysisTree" />
+		</InputData>
+
+		<InputData Lumi="466809.88372093" NEventsMax="-1" Type="MC" Version="TTbarlept" Cacheable="True">
+		        &TTbarlept;
+			<InputTree Name="AnalysisTree" />
+			<OutputTree Name="AnalysisTree" />
+		</InputData>
+
+
+
+		<InputData Lumi="3593.1" NEventsMax="-1" Type="MC" Version="WJets1" Cacheable="True">
+                        &WJets1;
+			<InputTree Name="AnalysisTree" /> 
+			<OutputTree Name="AnalysisTree" />  
+		</InputData>
+
+	        <InputData Lumi="16311" NEventsMax="-1" Type="MC" Version="WJets2" Cacheable="True">
+                        &WJets2;
+			<InputTree Name="AnalysisTree" /> 
+			<OutputTree Name="AnalysisTree" />  
+		</InputData>
+
+	        <InputData Lumi="25104" NEventsMax="-1" Type="MC" Version="WJets3" Cacheable="True">
+                        &WJets3;
+			<InputTree Name="AnalysisTree" /> 
+			<OutputTree Name="AnalysisTree" />  
+		</InputData>
+
+	        <InputData Lumi="52433" NEventsMax="-1" Type="MC" Version="WJets4" Cacheable="True">
+                        &WJets4;
+			<InputTree Name="AnalysisTree" /> 
+			<OutputTree Name="AnalysisTree" />  
+		</InputData>
+
+	        <InputData Lumi="36088" NEventsMax="-1" Type="MC" Version="ZJets1" Cacheable="True">
+	                 &ZJets1;
+                         <InputTree Name="AnalysisTree" />
+                         <OutputTree Name="AnalysisTree" />
+                </InputData>
+
+                <InputData Lumi="101650" NEventsMax="-1" Type="MC" Version="ZJets2" Cacheable="True">
+                         &ZJets2;
+                         <InputTree Name="AnalysisTree" />
+                         <OutputTree Name="AnalysisTree" />
+                </InputData>
+
+                 <InputData Lumi="181499" NEventsMax="-1" Type="MC" Version="ZJets3" Cacheable="True">
+                         &ZJets3;
+                         <InputTree Name="AnalysisTree" />
+                         <OutputTree Name="AnalysisTree" />
+                 </InputData>
+
+                 <InputData Lumi="233982" NEventsMax="-1" Type="MC" Version="ZJets4" Cacheable="True">
+                         &ZJets4;
+                         <InputTree Name="AnalysisTree" />
+                         <OutputTree Name="AnalysisTree" />
+                </InputData>
+
+	        <InputData Lumi="79531" NEventsMax="-1" Type="MC" Version="singleTbars" Cacheable="True">
+                        &singleTbars;
+                        <InputTree Name="AnalysisTree" />
+                        <OutputTree Name="AnalysisTree" />
+                </InputData>
+
+                <InputData Lumi="63032" NEventsMax="-1" Type="MC" Version="singleTbart" Cacheable="True">
+                        &singleTbart;
+                        <InputTree Name="AnalysisTree" />
+                        <OutputTree Name="AnalysisTree" />
+                </InputData>
+
+                <InputData Lumi="44456" NEventsMax="-1" Type="MC" Version="singleTbartW" Cacheable="True">
+                        &singleTbartW;
+                        <InputTree Name="AnalysisTree" />
+                        <OutputTree Name="AnalysisTree" />
+                </InputData>
+
+                <InputData Lumi="68591" NEventsMax="-1" Type="MC" Version="singleTs" Cacheable="True">
+                        &singleTs;
+                        <InputTree Name="AnalysisTree" />
+                        <OutputTree Name="AnalysisTree" />
+                </InputData>
+
+                <InputData Lumi="66635" NEventsMax="-1" Type="MC" Version="singleTt" Cacheable="True">
+                        &singleTt;
+                        <InputTree Name="AnalysisTree" />
+                        <OutputTree Name="AnalysisTree" />
+                </InputData>
+
+                <InputData Lumi="44834" NEventsMax="-1" Type="MC" Version="singleTtW" Cacheable="True">
+                        &singleTtW;
+                        <InputTree Name="AnalysisTree" />
+                        <OutputTree Name="AnalysisTree" />
+                </InputData>
+                
+                <InputData Lumi="182490" NEventsMax="-1" Type="MC" Version="doubleWW" Cacheable="True">
+                        &doubleWW;
+                        <InputTree Name="AnalysisTree" />
+                        <OutputTree Name="AnalysisTree" />
+                </InputData>
+
+                <InputData Lumi="301123" NEventsMax="-1" Type="MC" Version="doubleWZ" Cacheable="True">
+                        &doubleWZ;
+                        <InputTree Name="AnalysisTree" />
+                        <OutputTree Name="AnalysisTree" />
+                </InputData>
+
+                <InputData Lumi="1214680" NEventsMax="-1" Type="MC" Version="doubleZZ" Cacheable="True">
+                        &doubleZZ;
+                        <InputTree Name="AnalysisTree" />
+                        <OutputTree Name="AnalysisTree" />
+                </InputData>
+
+
+		<UserConfig>
+		     
+
+                   <Item Name="JetCollection" Value="goodPatJetsPFlow" />
+                   <Item Name="ElectronCollection" Value="selectedPatElectronsPFlowLoose" />
+                   <Item Name="MuonCollection" Value="selectedPatMuonsPFlowLoose" />
+                   <Item Name="TauCollection" Value="selectedPatTausPFlow" />
+                   <Item Name="PrimaryVertexCollection" Value="goodOfflinePrimaryVertices" />
+                   <Item Name="METName" Value="patMETsPFlow" />
+                   <Item Name="TopJetCollection" Value="goodPatJetsCAHEPTopTagPFPacked" />
+                   <Item Name="GenParticleCollection" Value="GenParticles" />
+
+		    <Item Name="JECFileLocation" Value="/scratch/hh/dust/naf/cms/user/imarches/JECfiles" />
+                    <Item Name="JECDataGlobalTag" Value="FT_53_V21_AN6" />
+                    <Item Name="JECMCGlobalTag" Value="START53_V27" />
+                    <Item Name="JECJetCollection" Value="AK5PFchs" />
+                    <Item Name="JECTopJetCollection" Value="AK7PFchs" />
+
+		    <Item Name="PU_Filename_MC" Value="/scratch/hh/dust/naf/cms/user/imarches/PileupFiles/PileUpHistoCycle" />
+                    <Item Name="PU_Filename_Data" Value="/scratch/hh/dust/naf/cms/user/peiffer/Analysis53X_v3/PileUpHistos/MyDataPileupHistogram.root" />
+                    <Item Name="PU_Histname_Data" Value="pileup" />
+                    <Item Name="PU_Histname_MC" Value="N_pileup_hist" />
+
+                 <Item Name="LumiFilePath" Value="/scratch/hh/dust/naf/cms/user/peiffer/Analysis53X_v3/LumiFiles/" />
+                 <Item Name="LumiFileName" Value="Mu40.root" />
+                 <Item Name="LumiTrigger" Value="HLT_Mu40_eta2p1_v" />
+
+                 <!-- UPDATE REQUIRED !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                 <Item Name="LeptonScaleFactors" Value="MuonRunABCD 1" />
+
+		</UserConfig>
+	</Cycle>
+</JobConfiguration>
