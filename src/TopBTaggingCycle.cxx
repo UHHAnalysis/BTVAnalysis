@@ -161,11 +161,11 @@ void TopBTaggingCycle::ExecuteEvent( const SInputData& id, Double_t weight) thro
 
   // start the analysis
   HistsNoCuts->Fill();
-  Histspt0_200->Fill();
-  Histspt200_400->Fill();
-  Histspt400_600->Fill();
-  Histspt600_800->Fill();
-  Histspt800_1000->Fill();
+  //Histspt0_200->Fill();
+  //Histspt200_400->Fill();
+  //Histspt400_600->Fill();
+  //Histspt600_800->Fill();
+  //Histspt800_1000->Fill();
   
   //if(!TopSel->passSelection(bcc))  throw SError( SError::SkipEvent );
 

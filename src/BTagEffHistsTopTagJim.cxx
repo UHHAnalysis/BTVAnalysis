@@ -87,6 +87,9 @@ void BTagEffHistsTopTagJim::Fill()
       Jet jet = jets->at(i);
       int flavour = abs(jet.flavor());
       //float csvcut=0.679;
+
+      //cout << m_CSVOperatingPoint << endl;
+
       bool btag = (jet.btag_combinedSecondaryVertex()>m_CSVOperatingPoint)?true:false;
 	
       switch(flavour) {

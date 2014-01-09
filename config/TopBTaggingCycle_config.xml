@@ -3,6 +3,8 @@
 <!ENTITY test SYSTEM "TTJets_HadronicMGDecays_8TeV-madgraph.xml">
 <!ENTITY TPrime1000 SYSTEM "Summer12_DR53X_TprimeTprimeToTHTHinc_M-1000_TuneZ2star_8TeV-madgraph_AODSIM_PU_S10_START53_V7C-v1.xml">
 <!ENTITY TT_Mtt1000toInf SYSTEM "TT_Mtt-1000toInf.xml">
+<!ENTITY TT_Mtt1000toInf_cone SYSTEM "ntuplewriter_ttbsm_53_plusprunedcfg_CA8_Summer12_DR53X_TT_Mtt-1000toInf_CT10_TuneZ2star_8TeV-powheg-tauola_AODSIM_PU_S10_START53_V7A-v1.xml">
+<!ENTITY ZP2000W20  SYSTEM "ZP2000W20.xml">
 ]>
 <!-- <JobConfiguration JobName="TopBTaggingCycleJob" OutputLevel="VERBOSE"> -->
 
@@ -21,12 +23,12 @@
 
 
 <!--	<Cycle Name="TopBTaggingCycle" RunMode="PROOF" ProofServer="lite://"  ProofWorkDir="" OutputDirectory="./" PostFix="" TargetLumi="1.0">-->
-	<Cycle Name="TopBTaggingCycle" OutputDirectory="./" PostFix="" TargetLumi="1.0">
+	<Cycle Name="TopBTaggingCycle" RunMode="PROOF" ProofServer="pod://"  ProofWorkDir="" OutputDirectory="./" PostFix="" TargetLumi="1.0">
 
 <!--	<InputData Lumi="1" NEventsMax="-1" Type="MC" Version="TEST" Cacheable="False">
 		        &test;			<InputTree Name="AnalysisTree" />
                 </InputData>
--->
+
 
 
 		<InputData Lumi="1" NEventsMax="-1" Type="MC" Version="TPrime1000" Cacheable="False">
@@ -35,15 +37,21 @@
                 </InputData>
 
 
-<!--
-
-		<InputData Lumi="1" NEventsMax="-1" Type="MC" Version="Highmassttbar" Cacheable="True">
-						&TT_Mtt1000toInf;
+		<InputData Lumi="1" NEventsMax="-1" Type="MC" Version="HighmassttbarLnolight_cone" Cacheable="True">
+						&TT_Mtt1000toInf_cone;
 			<InputTree Name="AnalysisTree" />
 
                 </InputData>
 
 -->
+
+		<InputData Lumi="1" NEventsMax="-1" Type="MC" Version="ZP2000W20M" Cacheable="True">
+						&ZP2000W20;
+			<InputTree Name="AnalysisTree" />
+
+                </InputData>
+
+
 
 		<UserConfig>
 		      <Item Name="JetCollection" Value="goodPatJetsPFlow" />
@@ -52,9 +60,9 @@
 		      <!--Item Name="TauCollection" Value="selectedPatTaus" /-->
 		      <Item Name="PrimaryVertexCollection" Value="goodOfflinePrimaryVertices" /> 
 		      <Item Name="METName" Value="patMETsPFlow" /> 
-		      <Item Name="TopTagJetCollection" Value="goodPatJetsCAHEPTopTagPFPacked" />
-		      <Item Name="TopJetCollection" Value="goodPatJetsCA15PrunedPFPacked"/>
-<!--		      <Item Name="TopJetCollection" Value="goodPatJetsCAHEPTopTagPFPacked"/>-->
+		      <!--Item Name="TopTagJetCollection" Value="goodPatJetsCAHEPTopTagPFPacked" /-->
+		      <!--Item Name="TopJetCollection" Value="goodPatJetsCA15PrunedPFPacked"/-->
+		      <Item Name="TopJetCollection" Value="goodPatJetsCAHEPTopTagPFPacked"/>
 		      <!--Item Name="PrunedJetCollection" Value="goodPatJetsCAHEPTopTagPFPacked" /--> 
 		      <!-- <Item Name="TopJetCollectionGen" Value="caTopTagGen" /> -->
 		      <Item Name="GenParticleCollection" Value="GenParticles" />

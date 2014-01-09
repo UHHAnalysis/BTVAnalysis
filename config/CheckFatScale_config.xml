@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE JobConfiguration PUBLIC "" "JobConfig.dtd" [
-<!ENTITY test SYSTEM "TTJets_HadronicMGDecays_8TeV-madgraph.xml">
+<!ENTITY test SYSTEM "test">
+<!ENTITY test2 SYSTEM "test">
+<!ENTITY qcd SYSTEM "QCD_HT-500To1000_TuneZ2star_8TeV-madgraph-pythia6.xml">
 <!ENTITY TPrime1000 SYSTEM "ntuplewriter_ttbsm_53_plusprunedcfg_Summer12_DR53X_TprimeTprimeToTHTHinc_M-1000_TuneZ2star_8TeV-madgraph_AODSIM_PU_S10_START53_V7C-v1.xml">
 <!ENTITY TT_Mtt1000toInf SYSTEM "TT_Mtt-1000toInf.xml">
 ]>
@@ -31,19 +33,19 @@
 
 
 
-		<InputData Lumi="1" NEventsMax="-1" Type="MC" Version="TPrime1000" Cacheable="False">
-		        &TPrime1000;
+		<InputData Lumi="1" NEventsMax="-1" Type="MC" Version="qcd" Cacheable="False">
+		        &test;
 			<InputTree Name="AnalysisTree" />
                 </InputData>
 
-<!--
-		<InputData Lumi="1" NEventsMax="-1" Type="MC" Version="ttbarhighmass" Cacheable="True">
-						&TT_Mtt1000toInf;
+
+
+		<InputData Lumi="1" NEventsMax="-1" Type="MC" Version="qcd" Cacheable="True">
+						&TPrime1000;
 			<InputTree Name="AnalysisTree" />
 
-                </InputData>
+               </InputData>
 
--->
 
 		<UserConfig>
 		      <Item Name="JetCollection" Value="goodPatJetsPFlow" />
@@ -79,8 +81,8 @@
 		      <!--Item Name="LumiFileName" Value="GoodRun_May12.root" /-->
 		      <!--Item Name="LumiTrigger" Value="HLT_PFJet320_v" /-->
 
-		      <Item Name="TopTaggingSFMode" Value="down" />
-
+		      <Item Name="TopTaggingSFMode" Value="mean" />
+		      
                 </UserConfig>
 	</Cycle>
 </JobConfiguration>

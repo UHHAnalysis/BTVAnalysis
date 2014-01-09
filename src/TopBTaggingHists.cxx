@@ -38,6 +38,70 @@ void TopBTaggingHists::Init()
 
   //Following hostrograms are filled independently from the pt bin (same in any pt-bin collection)
 
+  Book( TH1D( "effdriso3_fat_llb", "eff dr iso", 10, 0, 2.));
+  Book( TH1D( "effdriso3_fat_llb_num", "eff dr iso", 10, 0, 2.));
+  Book( TH1D( "effdriso3_llb1", "eff dr iso", 10, 0, 2.));
+  Book( TH1D( "effdriso3_llb1_num", "eff dr iso", 10, 0, 2.));
+  Book( TH1D( "effdriso3_llb_den", "eff dr iso", 10, 0, 2.));
+  Book( TH1D( "effdriso3_llb2", "eff dr iso", 10, 0, 2.));
+  Book( TH1D( "effdriso3_llb2_num", "eff dr iso", 10, 0, 2.));
+  Book( TH1D( "effdriso3_llb3", "eff dr iso", 10, 0, 2.));
+  Book( TH1D( "effdriso3_llb3_num", "eff dr iso", 10, 0, 2.));
+  Book( TH1D( "effdriso3_llb_and", "eff dr iso", 10, 0, 2.));
+  Book( TH1D( "effdriso3_llb_and_num", "eff dr iso", 10, 0, 2.));
+  Book( TH1D( "effdriso3_llb_x", "eff dr iso", 10, 0, 2.));
+  Book( TH1D( "effdriso3_llb_x_num", "eff dr iso", 10, 0, 2.));
+  Book( TH1D( "effdriso_fat", "eff dr iso fat", 10, 0, 2.));
+  Book( TH1D( "effdriso_fat_num", "eff dr iso fat num", 10, 0, 2.));
+  Book( TH1D( "effdriso_fat_den", "eff dr iso fat den", 10, 0, 2.));
+  Book( TH1D( "effdriso_fat_ll", "eff dr iso fat", 10, 0, 2.));
+  Book( TH1D( "effdriso_fat_ll_num", "eff dr iso fat num", 10, 0, 2.));
+  Book( TH1D( "effdriso_fat_ll_den", "eff dr iso fat den", 10, 0, 2.));
+  Book( TH1D( "effdriso_fat_lb", "eff dr iso fat", 10, 0, 2.));
+  Book( TH1D( "effdriso_fat_lb_num", "eff dr iso fat num", 10, 0, 2.));
+  Book( TH1D( "effdriso_fat_lb_den", "eff dr iso fat den", 10, 0, 2.));
+  Book( TH1D( "effdriso_ll1", "eff dr iso ll", 10, 0, 2.));
+  Book( TH1D( "effdriso_ll2", "eff dr iso ll", 10, 0, 2.));
+  Book( TH1D( "effdriso_ll_num1", "eff dr iso ll num 1", 10, 0, 2.));
+  Book( TH1D( "effdriso_ll_num2", "eff dr iso ll num 2", 10, 0, 2.));
+  Book( TH1D( "effdriso_ll_den", "eff dr iso ll den", 10, 0, 2.));
+  Book( TH1D( "effdriso_lb1", "eff dr iso lb", 10, 0, 2.));
+  Book( TH1D( "effdriso_lb2", "eff dr iso lb", 10, 0, 2.));
+  Book( TH1D( "effdriso_lb_num1", "eff dr iso lb num 1", 10, 0, 2.));
+  Book( TH1D( "effdriso_lb_num2", "eff dr iso lb num 2", 10, 0, 2.));
+  Book( TH1D( "effdriso_lb_den", "eff dr iso lb den", 10, 0, 2.));
+  Book( TH1D( "effdriso_ll_and_num", "eff dr iso ll & num", 10, 0, 2.));
+  Book( TH1D( "effdriso_ll_and", "eff dr iso ll", 10, 0, 2.));
+  Book( TH1D( "effdriso_lb_and_num", "eff dr iso lb & num", 10, 0, 2.));
+  Book( TH1D( "effdriso_lb_and", "eff dr iso lb", 10, 0, 2.));
+  Book( TH1D( "effdriso_ll_x", "eff dr iso ll x", 10, 0, 2.));
+  Book( TH1D( "effdriso_lb_x", "eff dr iso lb x", 10, 0, 2.));
+  Book( TH1D( "effdriso3_fat", "eff dr iso3 fat", 10, 0, 2.));
+  Book( TH1D( "effdriso3_fat_num", "eff dr iso3 fat num", 10, 0, 2.));
+  Book( TH1D( "effdriso3_fat_den", "eff dr iso3 fat den", 10, 0, 2.));
+  Book( TH1D( "effdriso3_fat_ll", "eff dr iso3 fat", 10, 0, 2.));
+  Book( TH1D( "effdriso3_fat_ll_num", "eff dr iso3 fat num", 10, 0, 2.));
+  Book( TH1D( "effdriso3_fat_ll_den", "eff dr iso3 fat den", 10, 0, 2.));
+  Book( TH1D( "effdriso3_fat_lb", "eff dr iso3 fat", 10, 0, 2.));
+  Book( TH1D( "effdriso3_fat_lb_num", "eff dr iso3 fat num", 10, 0, 2.));
+  Book( TH1D( "effdriso3_fat_lb_den", "eff dr iso3 fat den", 10, 0, 2.));
+  Book( TH1D( "effdriso3_ll1", "eff dr iso3 ll", 10, 0, 2.));
+  Book( TH1D( "effdriso3_ll2", "eff dr iso3 ll", 10, 0, 2.));
+  Book( TH1D( "effdriso3_ll_num1", "eff dr iso3 ll num 1", 10, 0, 2.));
+  Book( TH1D( "effdriso3_ll_num2", "eff dr iso3 ll num 2", 10, 0, 2.));
+  Book( TH1D( "effdriso3_ll_den", "eff dr iso3 ll den", 10, 0, 2.));
+  Book( TH1D( "effdriso3_lb1", "eff dr iso3 lb", 10, 0, 2.));
+  Book( TH1D( "effdriso3_lb2", "eff dr iso3 lb", 10, 0, 2.));
+  Book( TH1D( "effdriso3_lb_num1", "eff dr iso3 lb num 1", 10, 0, 2.));
+  Book( TH1D( "effdriso3_lb_num2", "eff dr iso3 lb num 2", 10, 0, 2.));
+  Book( TH1D( "effdriso3_lb_den", "eff dr iso3 lb den", 10, 0, 2.));
+  Book( TH1D( "effdriso3_ll_and_num", "eff dr iso3 ll & num", 10, 0, 2.));
+  Book( TH1D( "effdriso3_ll_and", "eff dr iso3 ll", 10, 0, 2.));
+  Book( TH1D( "effdriso3_lb_and_num", "eff dr iso3 lb & num", 10, 0, 2.));
+  Book( TH1D( "effdriso3_lb_and", "eff dr iso3 lb", 10, 0, 2.));
+  Book( TH1D( "effdriso3_ll_x", "eff dr iso3 ll x", 10, 0, 2.));
+  Book( TH1D( "effdriso3_lb_x", "eff dr iso3 lb x", 10, 0, 2.));
+  Book( TH1D( "P_pt", "prunedjet pt", 100, 0, 1000));
   Book( TH1D( "P_pt", "prunedjet pt", 100, 0, 1000));
   Book( TH1D( "Top_pt", "topjet pt", 100, 0, 1000));
   Book( TH1D( "b_pt", "b-subjet pt", 100, 0, 1000));
@@ -137,7 +201,7 @@ void TopBTaggingHists::Fill()
 
   double weight = calc->GetWeight();
 
-  weight=1;
+  //weight=1;
 
   if(weight!=1){
     //cout << "Using a special weight " << weight << endl;
@@ -154,13 +218,13 @@ void TopBTaggingHists::Fill()
   
   //Configuration stuff
   double assogen=1.5;
-  float csvcutM=0.679;
+  float csvcutM=0.244;
   float csvcutL=0.244;
   float assoRcut=1.5;
   int applyiso=0;
   int doivf=0;
 
-  int dohepmatch=1;
+  int dohepmatch=0;
 
   int csvivf=0;
 
@@ -978,6 +1042,608 @@ void TopBTaggingHists::Fill()
     }
 
   }//loop over mistag jets
+
+  Particle subjet1;
+  Particle subjet2;
+  double drisomin;
+  double driso3;
+  double csv1;
+  double csv2;
+  int tag1=0;
+  int tag2=0;
+  int fattag=0;
+  int flav1;
+  int flav2;
+
+  int applySiso=0;
+  int asklight=0;
+  double isocut=0.6;
+
+  std::vector<Particle> subjets;
+  std::vector<float> subjets_combinedSecondaryVertex;
+
+  int isiso=0;
+
+  int light123_1=0;
+  int light123_2=0;
+  int light123_3=0;
+
+  int b123_1=0;
+  int b123_2=0;
+  int b123_3=0;
+ 
+  int countlight=0;
+  int countb=0;
+
+  Particle subjet123_1;
+  Particle subjet123_2;
+  Particle subjet123_3;
+  double csv123_1;
+  double csv123_2;
+  double csv123_3;
+  int tag123_1=0;
+  int tag123_2=0;
+  int tag123_3=0;
+  int fattag123=0;
+
+  int checkflav;
+
+  if(HepTopTag(topjet)&&goodtop==1&&topjet.pt()>=m_ptMin&&topjet.pt()<m_ptMax){
+    subjets = topjet.subjets();
+    subjets_combinedSecondaryVertex=topjet.btagsub_combinedSecondaryVertex();
+    flavorsub_top=topjet.flavorsub();
+    double dr12=subjets[0].deltaR(subjets[1]);
+    double dr13=subjets[0].deltaR(subjets[2]);
+    double dr23=subjets[1].deltaR(subjets[2]);
+    driso3=sqrt(dr12*dr12+dr13*dr13+dr23*dr23);
+    //123 study
+    checkflav=flavorsub_top[0];
+    if(abs(checkflav)==1||abs(checkflav)==2||abs(checkflav)==3||abs(checkflav)==21){
+      light123_1=1;
+      countlight=countlight+1;
+    }
+    if(abs(checkflav)==5){
+      b123_1=1;
+      countb=countb+1;
+    }
+    checkflav=flavorsub_top[1];
+    if(abs(checkflav)==1||abs(checkflav)==2||abs(checkflav)==3||abs(checkflav)==21){
+      light123_2=1;
+      countlight=countlight+1;
+    }
+    if(abs(checkflav)==5){
+      b123_2=1;
+      countb=countb+1;
+    }
+    checkflav=flavorsub_top[2];
+    if(abs(checkflav)==1||abs(checkflav)==2||abs(checkflav)==3||abs(checkflav)==21){
+      light123_3=1;
+      countlight=countlight+1;
+    }
+    if(abs(checkflav)==5){
+      b123_3=1;
+      countb=countb+1;
+    }
+    if(countb!=0){
+      if(b123_1==1){
+	subjet123_1=subjets[0];
+	csv123_1=subjets_combinedSecondaryVertex[0];
+	if(!asklight){
+	  if((subjets[1].pt()<=subjets[2].pt())){
+	    subjet123_2=subjets[1];
+	    csv123_2=subjets_combinedSecondaryVertex[1];
+	    subjet123_3=subjets[2];
+	    csv123_3=subjets_combinedSecondaryVertex[2];
+	  }
+	  if((subjets[1].pt()>subjets[2].pt())){
+	    subjet123_2=subjets[2];
+	    csv123_2=subjets_combinedSecondaryVertex[2];
+	    subjet123_3=subjets[1];
+	    csv123_3=subjets_combinedSecondaryVertex[1];
+	  }
+	}
+      }
+      if(b123_2==1){
+	subjet123_1=subjets[1];
+	csv123_1=subjets_combinedSecondaryVertex[1];
+	if(!asklight){
+	  if((subjets[0].pt()<=subjets[2].pt())){
+	    subjet123_2=subjets[0];
+	    csv123_2=subjets_combinedSecondaryVertex[0];
+	    subjet123_3=subjets[2];
+	    csv123_3=subjets_combinedSecondaryVertex[2];
+	  }
+	  if((subjets[0].pt()>subjets[2].pt())){
+	    subjet123_2=subjets[2];
+	    csv123_2=subjets_combinedSecondaryVertex[2];
+	    subjet123_3=subjets[0];
+	    csv123_3=subjets_combinedSecondaryVertex[0];
+	  }
+	}
+      }
+      if(b123_3==1){
+	subjet123_1=subjets[2];
+	csv123_1=subjets_combinedSecondaryVertex[2];
+	if(!asklight){
+	  if((subjets[0].pt()<=subjets[1].pt())){
+	    subjet123_2=subjets[0];
+	    csv123_2=subjets_combinedSecondaryVertex[0];
+	    subjet123_3=subjets[1];
+	    csv123_3=subjets_combinedSecondaryVertex[1];
+	  }
+	  if((subjets[0].pt()>subjets[1].pt())){
+	    subjet123_2=subjets[1];
+	    csv123_2=subjets_combinedSecondaryVertex[1];
+	    subjet123_3=subjets[0];
+	    csv123_3=subjets_combinedSecondaryVertex[0];
+	  }
+	}
+      }
+      if(asklight&&light123_1==1&&light123_2==1&&(subjets[0].pt()<=subjets[1].pt())){
+	subjet123_2=subjets[0];
+	csv123_2=subjets_combinedSecondaryVertex[0];
+	subjet123_3=subjets[1];
+	csv123_3=subjets_combinedSecondaryVertex[1];
+      }
+      if(asklight&&light123_1==1&&light123_2==1&&(subjets[0].pt()>subjets[1].pt())){
+	subjet123_2=subjets[1];
+	csv123_2=subjets_combinedSecondaryVertex[1];
+	subjet123_3=subjets[0];
+	csv123_3=subjets_combinedSecondaryVertex[0];
+      }
+      if(asklight&&light123_2==1&&light123_3==1&&(subjets[1].pt()<=subjets[2].pt())){
+	subjet123_2=subjets[1];
+	csv123_2=subjets_combinedSecondaryVertex[1];
+	subjet123_3=subjets[2];
+	csv123_3=subjets_combinedSecondaryVertex[2];
+      }
+      if(asklight&&light123_2==1&&light123_3==1&&(subjets[1].pt()>subjets[2].pt())){
+	subjet123_2=subjets[2];
+	csv123_2=subjets_combinedSecondaryVertex[2];
+	subjet123_3=subjets[1];
+	csv123_3=subjets_combinedSecondaryVertex[1];
+      }
+      if(asklight&&light123_1==1&&light123_3==1&&(subjets[0].pt()<=subjets[2].pt())){
+	subjet123_2=subjets[0];
+	csv123_2=subjets_combinedSecondaryVertex[0];
+	subjet123_3=subjets[2];
+	csv123_3=subjets_combinedSecondaryVertex[2];
+      }
+      if(asklight&&light123_1==1&&light123_3==1&&(subjets[0].pt()>subjets[2].pt())){
+	subjet123_2=subjets[2];
+	csv123_2=subjets_combinedSecondaryVertex[2];
+	subjet123_3=subjets[0];
+	csv123_3=subjets_combinedSecondaryVertex[0];
+      }
+      if(csv123_1>csvcutM) tag123_1=1;
+      if(csv123_2>csvcutM) tag123_2=1;
+      if(csv123_3>csvcutM) tag123_3=1;
+      if((!asklight)||(asklight&&countb==1&&countlight==2)){
+	if(topjet.btag_combinedSecondaryVertex()>csvcutM) fattag123=1;
+	Hist("effdriso3_llb_den")->Fill(driso3, weight);
+	if(fattag123) Hist("effdriso3_fat_llb_num")->Fill(driso3, weight);
+	if(tag123_1) Hist("effdriso3_llb1_num")->Fill(driso3, weight);
+	if(tag123_2) Hist("effdriso3_llb2_num")->Fill(driso3, weight);
+	if(tag123_3) Hist("effdriso3_llb3_num")->Fill(driso3, weight);
+	if(tag123_1&&tag123_2&&tag123_3) Hist("effdriso3_llb_and_num")->Fill(driso3, weight);
+      }
+    }//123 case
+    if(dr12<=dr13&&dr12<=dr23){
+      if(dr13>isocut&&dr23>isocut) isiso=1;
+      if(subjets[0].pt()<=subjets[1].pt()){
+	subjet1=subjets[0];
+	subjet2=subjets[1];
+	csv1=subjets_combinedSecondaryVertex[0];
+	csv2=subjets_combinedSecondaryVertex[1];
+	flav1=flavorsub_top[0];
+	flav2=flavorsub_top[1];
+	drisomin=dr12;
+      }
+      else{
+	subjet1=subjets[1];
+	subjet2=subjets[0];
+	csv1=subjets_combinedSecondaryVertex[1];
+	csv2=subjets_combinedSecondaryVertex[0];
+	flav1=flavorsub_top[1];
+	flav2=flavorsub_top[0];
+	drisomin=dr12;
+      }
+    }
+    if(dr13<=dr12&&dr13<=dr23){
+      if(dr12>isocut&&dr23>isocut) isiso=1;
+      if(subjets[0].pt()<=subjets[2].pt()){
+	subjet1=subjets[0];
+	subjet2=subjets[2];
+	csv1=subjets_combinedSecondaryVertex[0];
+	csv2=subjets_combinedSecondaryVertex[2];
+	flav1=flavorsub_top[0];
+	flav2=flavorsub_top[2];
+	drisomin=dr13;
+      }
+      else{
+	subjet1=subjets[2];
+	subjet2=subjets[0];
+	csv1=subjets_combinedSecondaryVertex[2];
+	csv2=subjets_combinedSecondaryVertex[0];
+	flav1=flavorsub_top[2];
+	flav2=flavorsub_top[0];
+	drisomin=dr13;
+      }
+    }
+    if(dr23<=dr12&&dr23<=dr13){
+      if(dr12>isocut&&dr13>isocut) isiso=1;
+      if(subjets[1].pt()<=subjets[2].pt()){
+	subjet1=subjets[1];
+	subjet2=subjets[2];
+	csv1=subjets_combinedSecondaryVertex[1];
+	csv2=subjets_combinedSecondaryVertex[2];
+	flav1=flavorsub_top[1];
+	flav2=flavorsub_top[2];
+	drisomin=dr23;
+      }
+      else{
+	subjet1=subjets[2];
+	subjet2=subjets[1];
+	csv1=subjets_combinedSecondaryVertex[2];
+	csv2=subjets_combinedSecondaryVertex[1];
+	flav1=flavorsub_top[2];
+	flav2=flavorsub_top[1];
+	drisomin=dr23;
+      }
+    }
+    if(applySiso==0 || (applySiso==1&&isiso==1)){
+      if(csv1>csvcutM) tag1=1;
+      if(csv2>csvcutM) tag2=1;
+      if(topjet.btag_combinedSecondaryVertex()>csvcutM) fattag=1;
+      if(fattag) Hist("effdriso_fat_num")->Fill(drisomin, weight);
+      if(fattag) Hist("effdriso3_fat_num")->Fill(driso3, weight);
+      Hist("effdriso_fat_den")->Fill(drisomin, weight);
+      Hist("effdriso3_fat_den")->Fill(driso3, weight);
+      int light1=0;
+      int light2=0;
+      int b1=0;
+      int b2=0;
+      if(abs(flav1)==1||abs(flav1)==2||abs(flav1)==3||abs(flav1)==21) light1=1; 
+      if(abs(flav2)==1||abs(flav2)==2||abs(flav2)==3||abs(flav2)==21) light2=1;
+      if(abs(flav1)==5) b1=1;
+      if(abs(flav2)==5) b2=1;
+      if(light1&&light2&&(!asklight||(asklight&&(abs(flav1)!=abs(flav2))))){//leave ordering in pT
+	if(fattag) Hist("effdriso_fat_ll_num")->Fill(drisomin, weight);
+	if(fattag) Hist("effdriso3_fat_ll_num")->Fill(driso3, weight);
+	Hist("effdriso_fat_ll_den")->Fill(drisomin, weight);
+	Hist("effdriso3_fat_ll_den")->Fill(driso3, weight);
+	Hist("effdriso_ll_den")->Fill(drisomin,weight);
+	Hist("effdriso3_ll_den")->Fill(driso3,weight);
+	if(tag1) Hist("effdriso_ll_num1")->Fill(drisomin,weight);
+	if(tag2) Hist("effdriso_ll_num2")->Fill(drisomin,weight);
+	if(tag1) Hist("effdriso3_ll_num1")->Fill(driso3,weight);
+	if(tag2) Hist("effdriso3_ll_num2")->Fill(driso3,weight);
+	if(tag1&&tag2) Hist("effdriso_ll_and_num")->Fill(drisomin,weight);
+	if(tag1&&tag2) Hist("effdriso3_ll_and_num")->Fill(driso3,weight);
+      }
+      if(b2){//order in flavor
+	if(!asklight||(asklight&&light1)){
+	  if(fattag) Hist("effdriso_fat_lb_num")->Fill(drisomin, weight);
+	  if(fattag) Hist("effdriso3_fat_lb_num")->Fill(driso3, weight);
+	  Hist("effdriso_fat_lb_den")->Fill(drisomin, weight);
+	  Hist("effdriso3_fat_lb_den")->Fill(driso3, weight);
+	  Hist("effdriso_lb_den")->Fill(drisomin,weight);
+	  Hist("effdriso3_lb_den")->Fill(driso3,weight);
+	  if(tag1) Hist("effdriso_lb_num2")->Fill(drisomin,weight);
+	  if(tag2) Hist("effdriso_lb_num1")->Fill(drisomin,weight);
+	  if(tag1) Hist("effdriso3_lb_num2")->Fill(driso3,weight);
+	  if(tag2) Hist("effdriso3_lb_num1")->Fill(driso3,weight);
+	  if(tag1&&tag2) Hist("effdriso_lb_and_num")->Fill(drisomin,weight);
+	  if(tag1&&tag2) Hist("effdriso3_lb_and_num")->Fill(driso3,weight);
+	}
+      }
+      if(b1){//order in flavor
+	if(!asklight||(asklight&&light2)){
+	  if(fattag) Hist("effdriso_fat_lb_num")->Fill(drisomin, weight);
+	  if(fattag) Hist("effdriso3_fat_lb_num")->Fill(driso3, weight);
+	  Hist("effdriso_fat_lb_den")->Fill(drisomin, weight);
+	  Hist("effdriso3_fat_lb_den")->Fill(driso3, weight);
+	  Hist("effdriso_lb_den")->Fill(drisomin,weight);
+	  Hist("effdriso3_lb_den")->Fill(driso3,weight);
+	  if(tag1) Hist("effdriso_lb_num1")->Fill(drisomin,weight);
+	  if(tag2) Hist("effdriso_lb_num2")->Fill(drisomin,weight);
+	  if(tag1) Hist("effdriso3_lb_num1")->Fill(driso3,weight);
+	  if(tag2) Hist("effdriso3_lb_num2")->Fill(driso3,weight);
+	  if(tag1&&tag2) Hist("effdriso_lb_and_num")->Fill(drisomin,weight);
+	  if(tag1&&tag2) Hist("effdriso3_lb_and_num")->Fill(driso3,weight);
+	}
+      }
+    }//is iso
+  }//goodtop
+  
+  tag1=0;
+  tag2=0;
+  fattag=0;
+  isiso=0;
+
+  light123_1=0;
+  light123_2=0;
+  light123_3=0;
+
+  b123_1=0;
+  b123_2=0;
+  b123_3=0;
+ 
+  countlight=0;
+  countb=0;
+
+  tag123_1=0;
+  tag123_2=0;
+  tag123_3=0;
+  fattag123=0;
+
+  if(HepTopTag(antitopjet)&&goodantitop==1&&antitopjet.pt()>=m_ptMin&&antitopjet.pt()<m_ptMax){
+    subjets = antitopjet.subjets();
+    subjets_combinedSecondaryVertex=antitopjet.btagsub_combinedSecondaryVertex();
+    flavorsub_top=antitopjet.flavorsub();
+    double dr12=subjets[0].deltaR(subjets[1]);
+    double dr13=subjets[0].deltaR(subjets[2]);
+    double dr23=subjets[1].deltaR(subjets[2]);
+    driso3=sqrt(dr12*dr12+dr13*dr13+dr23*dr23);
+    //123 study
+    checkflav=flavorsub_top[0];
+    if(abs(checkflav)==1||abs(checkflav)==2||abs(checkflav)==3||abs(checkflav)==21){
+      light123_1=1;
+      countlight=countlight+1;
+    }
+    if(abs(checkflav)==5){
+      b123_1=1;
+      countb=countb+1;
+    }
+    checkflav=flavorsub_top[1];
+    if(abs(checkflav)==1||abs(checkflav)==2||abs(checkflav)==3||abs(checkflav)==21){
+      light123_2=1;
+      countlight=countlight+1;
+    }
+    if(abs(checkflav)==5){
+      b123_2=1;
+      countb=countb+1;
+    }
+    checkflav=flavorsub_top[2];
+    if(abs(checkflav)==1||abs(checkflav)==2||abs(checkflav)==3||abs(checkflav)==21){
+      light123_3=1;
+      countlight=countlight+1;
+    }
+    if(abs(checkflav)==5){
+      b123_3=1;
+      countb=countb+1;
+    }
+    if(countb!=0){
+      if(b123_1==1){
+	subjet123_1=subjets[0];
+	csv123_1=subjets_combinedSecondaryVertex[0];
+	if(!asklight){
+	  if((subjets[1].pt()<=subjets[2].pt())){
+	    subjet123_2=subjets[1];
+	    csv123_2=subjets_combinedSecondaryVertex[1];
+	    subjet123_3=subjets[2];
+	    csv123_3=subjets_combinedSecondaryVertex[2];
+	  }
+	  if((subjets[1].pt()>subjets[2].pt())){
+	    subjet123_2=subjets[2];
+	    csv123_2=subjets_combinedSecondaryVertex[2];
+	    subjet123_3=subjets[1];
+	    csv123_3=subjets_combinedSecondaryVertex[1];
+	  }
+	}
+      }
+      if(b123_2==1){
+	subjet123_1=subjets[1];
+	csv123_1=subjets_combinedSecondaryVertex[1];
+	if(!asklight){
+	  if((subjets[0].pt()<=subjets[2].pt())){
+	    subjet123_2=subjets[0];
+	    csv123_2=subjets_combinedSecondaryVertex[0];
+	    subjet123_3=subjets[2];
+	    csv123_3=subjets_combinedSecondaryVertex[2];
+	  }
+	  if((subjets[0].pt()>subjets[2].pt())){
+	    subjet123_2=subjets[2];
+	    csv123_2=subjets_combinedSecondaryVertex[2];
+	    subjet123_3=subjets[0];
+	    csv123_3=subjets_combinedSecondaryVertex[0];
+	  }
+	}
+      }
+      if(b123_3==1){
+	subjet123_1=subjets[2];
+	csv123_1=subjets_combinedSecondaryVertex[2];
+	if(!asklight){
+	  if((subjets[0].pt()<=subjets[1].pt())){
+	    subjet123_2=subjets[0];
+	    csv123_2=subjets_combinedSecondaryVertex[0];
+	    subjet123_3=subjets[1];
+	    csv123_3=subjets_combinedSecondaryVertex[1];
+	  }
+	  if((subjets[0].pt()>subjets[1].pt())){
+	    subjet123_2=subjets[1];
+	    csv123_2=subjets_combinedSecondaryVertex[1];
+	    subjet123_3=subjets[0];
+	    csv123_3=subjets_combinedSecondaryVertex[0];
+	  }
+	}
+      }
+      if(asklight&&light123_1==1&&light123_2==1&&(subjets[0].pt()<=subjets[1].pt())){
+	subjet123_2=subjets[0];
+	csv123_2=subjets_combinedSecondaryVertex[0];
+	subjet123_3=subjets[1];
+	csv123_3=subjets_combinedSecondaryVertex[1];
+      }
+      if(asklight&&light123_1==1&&light123_2==1&&(subjets[0].pt()>subjets[1].pt())){
+	subjet123_2=subjets[1];
+	csv123_2=subjets_combinedSecondaryVertex[1];
+	subjet123_3=subjets[0];
+	csv123_3=subjets_combinedSecondaryVertex[0];
+      }
+      if(asklight&&light123_2==1&&light123_3==1&&(subjets[1].pt()<=subjets[2].pt())){
+	subjet123_2=subjets[1];
+	csv123_2=subjets_combinedSecondaryVertex[1];
+	subjet123_3=subjets[2];
+	csv123_3=subjets_combinedSecondaryVertex[2];
+      }
+      if(asklight&&light123_2==1&&light123_3==1&&(subjets[1].pt()>subjets[2].pt())){
+	subjet123_2=subjets[2];
+	csv123_2=subjets_combinedSecondaryVertex[2];
+	subjet123_3=subjets[1];
+	csv123_3=subjets_combinedSecondaryVertex[1];
+      }
+      if(asklight&&light123_1==1&&light123_3==1&&(subjets[0].pt()<=subjets[2].pt())){
+	subjet123_2=subjets[0];
+	csv123_2=subjets_combinedSecondaryVertex[0];
+	subjet123_3=subjets[2];
+	csv123_3=subjets_combinedSecondaryVertex[2];
+      }
+      if(asklight&&light123_1==1&&light123_3==1&&(subjets[0].pt()>subjets[2].pt())){
+	subjet123_2=subjets[2];
+	csv123_2=subjets_combinedSecondaryVertex[2];
+	subjet123_3=subjets[0];
+	csv123_3=subjets_combinedSecondaryVertex[0];
+      }
+      if(csv123_1>csvcutM) tag123_1=1;
+      if(csv123_2>csvcutM) tag123_2=1;
+      if(csv123_3>csvcutM) tag123_3=1;
+      if((!asklight)||(asklight&&countb==1&&countlight==2)){
+	if(antitopjet.btag_combinedSecondaryVertex()>csvcutM) fattag123=1;
+	Hist("effdriso3_llb_den")->Fill(driso3, weight);
+	if(fattag123) Hist("effdriso3_fat_llb_num")->Fill(driso3, weight);
+	if(tag123_1) Hist("effdriso3_llb1_num")->Fill(driso3, weight);
+	if(tag123_2) Hist("effdriso3_llb2_num")->Fill(driso3, weight);
+	if(tag123_3) Hist("effdriso3_llb3_num")->Fill(driso3, weight);
+	if(tag123_1&&tag123_2&&tag123_3) Hist("effdriso3_llb_and_num")->Fill(driso3, weight);
+      }
+    }//123 case
+    if(dr12<=dr13&&dr12<=dr23){
+      if(dr13>isocut&&dr23>isocut) isiso=1;
+      if(subjets[0].pt()<=subjets[1].pt()){
+	subjet1=subjets[0];
+	subjet2=subjets[1];
+	csv1=subjets_combinedSecondaryVertex[0];
+	csv2=subjets_combinedSecondaryVertex[1];
+	flav1=flavorsub_top[0];
+	flav2=flavorsub_top[1];
+	drisomin=dr12;
+      }
+      else{
+	subjet1=subjets[1];
+	subjet2=subjets[0];
+	csv1=subjets_combinedSecondaryVertex[1];
+	csv2=subjets_combinedSecondaryVertex[0];
+	flav1=flavorsub_top[1];
+	flav2=flavorsub_top[0];
+	drisomin=dr12;
+      }
+    }
+    if(dr13<=dr12&&dr13<=dr23){
+      if(dr12>isocut&&dr23>isocut) isiso=1;
+      if(subjets[0].pt()<=subjets[2].pt()){
+	subjet1=subjets[0];
+	subjet2=subjets[2];
+	csv1=subjets_combinedSecondaryVertex[0];
+	csv2=subjets_combinedSecondaryVertex[2];
+	flav1=flavorsub_top[0];
+	flav2=flavorsub_top[2];
+	drisomin=dr13;
+      }
+      else{
+	subjet1=subjets[2];
+	subjet2=subjets[0];
+	csv1=subjets_combinedSecondaryVertex[2];
+	csv2=subjets_combinedSecondaryVertex[0];
+	flav1=flavorsub_top[2];
+	flav2=flavorsub_top[0];
+	drisomin=dr13;
+      }
+    }
+    if(dr23<=dr12&&dr23<=dr13){
+      if(dr12>isocut&&dr13>isocut) isiso=1;
+      if(subjets[1].pt()<=subjets[2].pt()){
+	subjet1=subjets[1];
+	subjet2=subjets[2];
+	csv1=subjets_combinedSecondaryVertex[1];
+	csv2=subjets_combinedSecondaryVertex[2];
+	flav1=flavorsub_top[1];
+	flav2=flavorsub_top[2];
+	drisomin=dr23;
+      }
+      else{
+	subjet1=subjets[2];
+	subjet2=subjets[1];
+	csv1=subjets_combinedSecondaryVertex[2];
+	csv2=subjets_combinedSecondaryVertex[1];
+	flav1=flavorsub_top[2];
+	flav2=flavorsub_top[1];
+	drisomin=dr23;
+      }
+    }
+    if(applySiso==0 || (applySiso==1&&isiso==1)){
+      if(csv1>csvcutM) tag1=1;
+      if(csv2>csvcutM) tag2=1;
+      if(antitopjet.btag_combinedSecondaryVertex()>csvcutM) fattag=1;
+      if(fattag) Hist("effdriso_fat_num")->Fill(drisomin, weight);
+      if(fattag) Hist("effdriso3_fat_num")->Fill(driso3, weight);
+      Hist("effdriso_fat_den")->Fill(drisomin, weight);
+      Hist("effdriso3_fat_den")->Fill(driso3, weight);
+      int light1=0;
+      int light2=0;
+      int b1=0;
+      int b2=0;
+      if(abs(flav1)==1||abs(flav1)==2||abs(flav1)==3||abs(flav1)==21) light1=1; 
+      if(abs(flav2)==1||abs(flav2)==2||abs(flav2)==3||abs(flav2)==21) light2=1;
+      if(abs(flav1)==5) b1=1;
+      if(abs(flav2)==5) b2=1;
+      if(light1&&light2&&(!asklight||(asklight&&(abs(flav1)!=abs(flav2))))){//leave ordering in pT
+	if(fattag) Hist("effdriso_fat_ll_num")->Fill(drisomin, weight);
+	if(fattag) Hist("effdriso3_fat_ll_num")->Fill(driso3, weight);
+	Hist("effdriso_fat_ll_den")->Fill(drisomin, weight);
+	Hist("effdriso3_fat_ll_den")->Fill(driso3, weight);
+	Hist("effdriso_ll_den")->Fill(drisomin,weight);
+	Hist("effdriso3_ll_den")->Fill(driso3,weight);
+	if(tag1) Hist("effdriso_ll_num1")->Fill(drisomin,weight);
+	if(tag2) Hist("effdriso_ll_num2")->Fill(drisomin,weight);
+	if(tag1) Hist("effdriso3_ll_num1")->Fill(driso3,weight);
+	if(tag2) Hist("effdriso3_ll_num2")->Fill(driso3,weight);
+	if(tag1&&tag2) Hist("effdriso_ll_and_num")->Fill(drisomin,weight);
+	if(tag1&&tag2) Hist("effdriso3_ll_and_num")->Fill(driso3,weight);
+      }
+      if(b2){//order in flavor
+	if(!asklight||(asklight&&light1)){
+	  if(fattag) Hist("effdriso_fat_lb_num")->Fill(drisomin, weight);
+	  if(fattag) Hist("effdriso3_fat_lb_num")->Fill(driso3, weight);
+	  Hist("effdriso_fat_lb_den")->Fill(drisomin, weight);
+	  Hist("effdriso3_fat_lb_den")->Fill(driso3, weight);
+	  Hist("effdriso_lb_den")->Fill(drisomin,weight);
+	  Hist("effdriso3_lb_den")->Fill(driso3,weight);
+	  if(tag1) Hist("effdriso_lb_num2")->Fill(drisomin,weight);
+	  if(tag2) Hist("effdriso_lb_num1")->Fill(drisomin,weight);
+	  if(tag1) Hist("effdriso3_lb_num2")->Fill(driso3,weight);
+	  if(tag2) Hist("effdriso3_lb_num1")->Fill(driso3,weight);
+	  if(tag1&&tag2) Hist("effdriso_lb_and_num")->Fill(drisomin,weight);
+	  if(tag1&&tag2) Hist("effdriso3_lb_and_num")->Fill(driso3,weight);
+	}
+      }
+      if(b1){//order in flavor
+	if(!asklight||(asklight&&light2)){
+	  if(fattag) Hist("effdriso_fat_lb_num")->Fill(drisomin, weight);
+	  if(fattag) Hist("effdriso3_fat_lb_num")->Fill(driso3, weight);
+	  Hist("effdriso_fat_lb_den")->Fill(drisomin, weight);
+	  Hist("effdriso3_fat_lb_den")->Fill(driso3, weight);
+	  Hist("effdriso_lb_den")->Fill(drisomin,weight);
+	  Hist("effdriso3_lb_den")->Fill(driso3,weight);
+	  if(tag1) Hist("effdriso_lb_num1")->Fill(drisomin,weight);
+	  if(tag2) Hist("effdriso_lb_num2")->Fill(drisomin,weight);
+	  if(tag1) Hist("effdriso3_lb_num1")->Fill(driso3,weight);
+	  if(tag2) Hist("effdriso3_lb_num2")->Fill(driso3,weight);
+	  if(tag1&&tag2) Hist("effdriso_lb_and_num")->Fill(drisomin,weight);
+	  if(tag1&&tag2) Hist("effdriso3_lb_and_num")->Fill(driso3,weight);
+	}
+      }
+    }//is iso
+  }//goodantitop
   
 }
 
@@ -986,6 +1652,29 @@ void TopBTaggingHists::Finish()
   // final calculations, like division and addition of certain histograms
   EventCalc* calc = EventCalc::Instance();
   bool IsRealData = calc->IsRealData();
+
+  //Hist("effdriso_fat")->Divide(Hist("effdriso_fat_num"),Hist("effdriso_fat_den"),1,1,"B");
+  //Hist("effdriso3_fat")->Divide(Hist("effdriso3_fat_num"),Hist("effdriso3_fat_den"),1,1,"B");
+  //Hist("effdriso_fat_ll")->Divide(Hist("effdriso_fat_ll_num"),Hist("effdriso_fat_ll_den"),1,1,"B");
+  //Hist("effdriso3_fat_ll")->Divide(Hist("effdriso3_fat_ll_num"),Hist("effdriso3_fat_ll_den"),1,1,"B");
+  //Hist("effdriso_fat_lb")->Divide(Hist("effdriso_fat_lb_num"),Hist("effdriso_fat_lb_den"),1,1,"B");
+  //Hist("effdriso3_fat_lb")->Divide(Hist("effdriso3_fat_lb_num"),Hist("effdriso3_fat_lb_den"),1,1,"B");
+  //Hist("effdriso_ll1")->Divide(Hist("effdriso_ll_num1"),Hist("effdriso_ll_den"),1,1,"B");
+  //Hist("effdriso_ll2")->Divide(Hist("effdriso_ll_num2"),Hist("effdriso_ll_den"),1,1,"B");
+  //Hist("effdriso_lb1")->Divide(Hist("effdriso_lb_num1"),Hist("effdriso_lb_den"),1,1,"B");
+  //Hist("effdriso_lb2")->Divide(Hist("effdriso_lb_num2"),Hist("effdriso_lb_den"),1,1,"B");
+  //Hist("effdriso3_ll1")->Divide(Hist("effdriso3_ll_num1"),Hist("effdriso3_ll_den"),1,1,"B");
+  //Hist("effdriso3_ll2")->Divide(Hist("effdriso3_ll_num2"),Hist("effdriso3_ll_den"),1,1,"B");
+  //Hist("effdriso3_lb1")->Divide(Hist("effdriso3_lb_num1"),Hist("effdriso3_lb_den"),1,1,"B");
+  //Hist("effdriso3_lb2")->Divide(Hist("effdriso3_lb_num2"),Hist("effdriso3_lb_den"),1,1,"B");
+  //Hist("effdriso3_lb_and")->Divide(Hist("effdriso3_lb_and_num"),Hist("effdriso3_lb_den"),1,1,"B");
+  //Hist("effdriso3_ll_and")->Divide(Hist("effdriso3_ll_and_num"),Hist("effdriso3_ll_den"),1,1,"B");
+  //Hist("effdriso_lb_and")->Divide(Hist("effdriso_lb_and_num"),Hist("effdriso_lb_den"),1,1,"B");
+  //Hist("effdriso_ll_and")->Divide(Hist("effdriso_ll_and_num"),Hist("effdriso_ll_den"),1,1,"B");
+  //Hist("effdriso_ll_x")->Multiply(Hist("effdriso_ll1"),Hist("effdriso_ll2"),1,1);
+  //Hist("effdriso3_ll_x")->Multiply(Hist("effdriso3_ll1"),Hist("effdriso3_ll2"),1,1);
+  //Hist("effdriso_lb_x")->Multiply(Hist("effdriso_lb1"),Hist("effdriso_lb2"),1,1);
+  //Hist("effdriso3_lb_x")->Multiply(Hist("effdriso3_lb1"),Hist("effdriso3_lb2"),1,1);
 
   //Hist("H_Example_Effi")->Divide(Hist("H_Example"),Hist("H_Example"),1,1,"B");
   Hist("H_Effi_Matched")->Divide(Hist("H_Matched_Hadronic"),Hist("H_All_Hadronic"),1,1,"B");

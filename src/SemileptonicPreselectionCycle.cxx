@@ -80,8 +80,8 @@ void SemileptonicPreselectionCycle::BeginInputData( const SInputData& id ) throw
     preselectionNPrimaryVertexSelection->addSelectionModule(new NPrimaryVertexSelection(1));
     preselectionNElectronSelection->addSelectionModule(new NElectronSelection(0,0));
     preselectionNMuonSelection->addSelectionModule(new NMuonSelection(1,1));
-    preselectionNJetSelection->addSelectionModule(new NJetSelection(2,int_infinity(),30.,2.5));//at least two jets with pt>30GeV and eta<2.5
-    preselectionNTopJetSelection->addSelectionModule(new NTopJetSelection(1,int_infinity(),150.,2.5));//at least one jet with pt>150GeV and eta<2.5
+    preselectionNJetSelection->addSelectionModule(new NJetSelection(2,int_infinity(),30.,2.4));//at least two jets with pt>30GeV and eta<2.5
+    preselectionNTopJetSelection->addSelectionModule(new NTopJetSelection(1,int_infinity(),150.,2.4));//at least one jet with pt>150GeV and eta<2.5
 
     RegisterSelection(preselectionNPrimaryVertexSelection);
     RegisterSelection(preselectionNElectronSelection);
@@ -130,6 +130,8 @@ void SemileptonicPreselectionCycle::ExecuteEvent( const SInputData& id, Double_t
 
     AnalysisCycle::ExecuteEvent( id, weight);
 
+    Cleaner cleaner;
+
     EventCalc* calc = EventCalc::Instance();
     bool IsRealData = calc->IsRealData();
     
@@ -153,6 +155,9 @@ void SemileptonicPreselectionCycle::ExecuteEvent( const SInputData& id, Double_t
 
     BaseCycleContainer* bcc = calc->GetBaseCycleContainer();
     
+    if(bcc->muons) cleaner.MuonCleaner(45,2.1);
+    if(bcc->electrons) cleaner.ElectronCleaner(35,2.5);
+
     HistsNoCutSelection->Fill();
         
     if(trigger->passSelection()){/*HistsTriggerSelection->Fill();*/}
