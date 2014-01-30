@@ -21,7 +21,7 @@ class BTVHists : public BaseHists {
 
 public:
    /// Named constructor
-   BTVHists(const char* name);
+  BTVHists(const char* name,TString mode="default", TString filename="");
 
    /// Default destructor
    ~BTVHists();
@@ -33,6 +33,9 @@ public:
    void Finish();
 
 private:
+
+   std::string m_BTagEffiFilenameMC;
+   std::string m_BTaggingMode;
 
 }; // class BTVHists
 

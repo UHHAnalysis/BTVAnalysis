@@ -46,6 +46,10 @@ private:
   //
   
    Selection* BSel, * NoBSel, *TopSel, *chi2_selection;
+  std::string m_thetainput;
+//   BTaggingRoutine* m_bsf;
+  std::string m_BTagEffiFilenameMC;
+   std::string m_BTaggingMode;
 
   // Macro adding the functions for dictionary generation
   ClassDef( BTVCycle, 0 );

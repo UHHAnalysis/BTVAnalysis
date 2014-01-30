@@ -4,7 +4,7 @@
 <!ENTITY test2 SYSTEM "test">
 <!ENTITY qcd SYSTEM "QCD_HT-500To1000_TuneZ2star_8TeV-madgraph-pythia6.xml">
 <!ENTITY TPrime1000 SYSTEM "ntuplewriter_ttbsm_53_plusprunedcfg_Summer12_DR53X_TprimeTprimeToTHTHinc_M-1000_TuneZ2star_8TeV-madgraph_AODSIM_PU_S10_START53_V7C-v1.xml">
-<!ENTITY TT_Mtt1000toInf SYSTEM "TT_Mtt-1000toInf.xml">
+<!ENTITY ttbar SYSTEM "TTJets_HadronicMGDecays_8TeV-madgraph_ntuplewriter_ttbsm_53_plusprunedcfg_CA8_ptcut.xml">
 ]>
 <!-- <JobConfiguration JobName="CheckFatScaleCycleJob" OutputLevel="VERBOSE"> -->
 
@@ -22,8 +22,8 @@
         <Package Name="BTVAnalysis.par" />
 
 
-<!--	<Cycle Name="CheckFatScaleCycle" RunMode="PROOF" ProofServer="lite://"  ProofWorkDir="" OutputDirectory="./" PostFix="" TargetLumi="1.0">-->
-	<Cycle Name="CheckFatScaleCycle" OutputDirectory="./" PostFix="" TargetLumi="1.0">
+	<Cycle Name="CheckFatScaleCycle" RunMode="PROOF" ProofServer="pod://"  ProofWorkDir="/nfs/dust/cms/user/marchesi/PROOF/" OutputDirectory="./" PostFix="" TargetLumi="1.0">
+<!--	<Cycle Name="CheckFatScaleCycle" OutputDirectory="./" PostFix="" TargetLumi="1.0">-->
 
 <!--	<InputData Lumi="1" NEventsMax="-1" Type="MC" Version="TEST" Cacheable="False">
 	<In FileName="/nfs/dust/cms/user/marchesi/gitSFrame/SemileptPre/SemileptonicPreselectionCycle.DATA.DATAD.root"  Lumi="0.0"/>
@@ -32,16 +32,8 @@
 -->
 
 
-
-		<InputData Lumi="1" NEventsMax="-1" Type="MC" Version="wjets" Cacheable="False">
-		        &test;
-			<InputTree Name="AnalysisTree" />
-                </InputData>
-
-
-
 		<InputData Lumi="1" NEventsMax="-1" Type="MC" Version="ttbar" Cacheable="True">
-						&TPrime1000;
+						&ttbar;
 			<InputTree Name="AnalysisTree" />
 
                </InputData>
@@ -55,10 +47,10 @@
 		      <!--Item Name="TauCollection" Value="selectedPatTaus" /-->
 		      <Item Name="PrimaryVertexCollection" Value="goodOfflinePrimaryVertices" /> 
 		      <Item Name="METName" Value="patMETsPFlow" /> 
-		      <Item Name="TopJetCollection" Value="goodPatJetsCAHEPTopTagPFPacked"/>
-                      <Item Name="TopJetCollectionGen" Value="caHEPTopTagGen"/>
-		      <!--Item Name="TopJetCollection" Value="goodPatJetsCA15FilteredPFPacked"/-->
-                      <!--Item Name="TopJetCollectionGen" Value="caFilteredGenJetsNoNu"/-->
+		     <!-- <Item Name="TopJetCollection" Value="goodPatJetsCAHEPTopTagPFPacked"/>
+                      <Item Name="TopJetCollectionGen" Value="caHEPTopTagGen"/>-->
+		      <Item Name="TopJetCollection" Value="goodPatJetsCA15FilteredPFPacked"/>
+                      <Item Name="TopJetCollectionGen" Value="caFilteredGenJetsNoNu"/>
 		      <!--Item Name="PrunedJetCollection" Value="goodPatJetsCAHEPTopTagPFPacked" /--> 
 		      <!-- <Item Name="TopJetCollectionGen" Value="caTopTagGen" /> -->
 		      <Item Name="GenParticleCollection" Value="GenParticles" />
@@ -81,7 +73,7 @@
 		      <!--Item Name="LumiFileName" Value="GoodRun_May12.root" /-->
 		      <!--Item Name="LumiTrigger" Value="HLT_PFJet320_v" /-->
 
-		      <Item Name="toppagptweight" Value="mean" />
+		      <!--Item Name="toppagptweight" Value="mean" /-->
 		      
                 </UserConfig>
 	</Cycle>
